@@ -120,7 +120,11 @@ class FacetFiltersForm extends HTMLElement {
     FacetFiltersForm.renderActiveFacets(parsedHTML);
     FacetFiltersForm.renderAdditionalElements(parsedHTML);
 
-    if (countsToRender) FacetFiltersForm.renderCounts(countsToRender, event.target.closest('.js-filter'));
+    if (countsToRender) {
+      const closestFilterElID = event.target.closest('.js-filter').id;
+      FacetFiltersForm.renderCounts(countsToRender, event.target.closest('.js-filter'));
+      FacetFiltersForm.renderDrawerCounts(countsToRender, document.getElementById(closestFilterElID));
+    }
   }
 
   static renderActiveFacets(html) {
@@ -155,10 +159,36 @@ class FacetFiltersForm extends HTMLElement {
 
     if (sourceElement && targetElement) {
       target.querySelector('.facets__selected').outerHTML = source.querySelector('.facets__selected').outerHTML;
+
+      const targetWrapElement = target.querySelector('.facets-wrap');
+      const sourceWrapElement = source.querySelector('.facets-wrap');
+
+      if (sourceWrapElement && targetWrapElement) {
+        const currentActiveID = document.activeElement.id;
+        target.querySelector('.facets-wrap').outerHTML = source.querySelector('.facets-wrap').outerHTML;
+        const newElementToActivate = document.getElementById(`${currentActiveID}`);
+        if (newElementToActivate) {
+          newElementToActivate.focus();
+        }
+      }
     }
 
     if (targetElementAccessibility && sourceElementAccessibility) {
       target.querySelector('.facets__summary').outerHTML = source.querySelector('.facets__summary').outerHTML;
+    }
+  }
+
+  static renderDrawerCounts(source, target) {
+    const targetElement = target.querySelector('.mobile-facets__list');
+    const sourceElement = source.querySelector('.mobile-facets__list');
+
+    if (sourceElement && targetElement) {
+      const currentActiveID = document.activeElement.id;
+      targetElement.outerHTML = sourceElement.outerHTML;
+      const newElementToActivate = document.getElementById(`${currentActiveID}`);
+      if (newElementToActivate) {
+        newElementToActivate.focus();
+      }
     }
   }
 
