@@ -1,0 +1,56 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-about-us": {
+      "type": "ecom-about-us-page",
+      "settings": {
+      }
+    },
+    "e747ca86-12b9-479c-9d3f-b49029263280": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19738595918148__e747ca86-12b9-479c-9d3f-b49029263280-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "hxl"
+          }
+        },
+        "template--19738595918148__e747ca86-12b9-479c-9d3f-b49029263280-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--19738595918148__e747ca86-12b9-479c-9d3f-b49029263280-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19738595918148__e747ca86-12b9-479c-9d3f-b49029263280-heading-1",
+        "template--19738595918148__e747ca86-12b9-479c-9d3f-b49029263280-text-1",
+        "template--19738595918148__e747ca86-12b9-479c-9d3f-b49029263280-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "ecom-about-us",
+    "e747ca86-12b9-479c-9d3f-b49029263280"
+  ]
+}
