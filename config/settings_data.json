@@ -116,8 +116,8 @@
     "checkout_logo_size": "medium",
     "checkout_body_background_color": "#dd1d1d",
     "checkout_input_background_color_mode": "white",
-    "checkout_heading_font": "Vidaloka",
-    "checkout_body_font": "Lora",
+    "checkout_heading_font": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman'",
+    "checkout_body_font": "Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman'",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
