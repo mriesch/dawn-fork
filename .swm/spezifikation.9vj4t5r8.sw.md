@@ -5,7 +5,7 @@ title: Spezifikation
 
 Ein RPM besteht aus einer einzigen Datei. Normalerweise hat der Dateinamen folgendes Format:
 
-```bash
+```
  <name>-<version>-<release>
 ```
 
