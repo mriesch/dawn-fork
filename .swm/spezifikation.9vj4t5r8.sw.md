@@ -18,7 +18,7 @@ Die Schlüsselwörter „MUSS“, „DARF NICHT“, „ERFORDERLICH“, „SOLL�
 Im Kontext der DDS-Classic gibt es genau zwei Build Typen.
 
 | Vollständige Liste aller gültigen Werte | Verwendung                                                                 |
-| --------------------------------------- | -------------------------------------------------------------------------- |
+| :-------------------------------------- | :------------------------------------------------------------------------- |
 | RELEASE                                 | Wird an den Test weitergeben. KANN auch in Produktions installiert werden. |
 | SNAPSHOT                                | Wird NICHT an den Test weitergegeben werden                                |
 
@@ -26,7 +26,7 @@ Regeln:
 
 - Wenn in Git Branch develop/ oder release/ gebaut ist der Build Typ ein RELEASE.
 
-- Wenn in einem anderen Git Branch gebaut wird ist Build Typ ein SNAPSHOT.
+- Wenn in einem anderen Git Branch gebaut wird, ist Build Typ ein SNAPSHOT.
 
 - Wenn der Git Branch nicht ermittelt werden kann (z.B. HEAD detached at <Commit-ID>  als Grund), wird auf die Jenkins Environment Variable ausgewertet.
 
@@ -97,7 +97,7 @@ Sonstige Anforderungen:
 - Diese Nomenklatur MUSS verwendet werden wenn NICHT aus dem Git Branch /develop oder /relase gebaut wird.
 - Die Zahlen SOLLEN haben keine führende Null haben.
 - Es MUSS ein Tupel der Länge 3 sein.
-- Semantic Versioning KANN verwedet werden.
+- Semantic Versioning KANN verwendet werden.
 - Der Implementierungsname ist snapshot
 
 ## Spezifikation Zeichenkette RPM-Release
@@ -183,5 +183,31 @@ echo "${0} 'build_type'    -> Ausgabe >${build_type}<" echo "${0} 'branch_name' 
 #### RELEASE Domäne wird in folgendes Verzeichnis installiert
 
 /var/apps/weblogic/local/classic-21.00.00-build10
+
+<SwmSnippet path="/snippets/price.liquid" line="1">
+
+---
+
+This code snippet is a Liquid template that renders the price of a product. It has several optional parameters such as `product`, `use_variant`, `show_badges`, `price_class`, and `show_compare_at_price` that allow customization of the rendered price. The code is intended to be used by calling the `render` tag with the `'price'` template and passing the `product` object as an argument.
+
+```liquid
+{% comment %}
+  Renders a list of product's price (regular, sale)
+
+  Accepts:
+  - product: {Object} Product Liquid object (optional)
+  - use_variant: {Boolean} Renders selected or first variant price instead of overall product pricing (optional)
+  - show_badges: {Boolean} Renders 'Sale' and 'Sold Out' tags if the product matches the condition (optional)
+  - price_class: {String} Adds a price class to the price element (optional)
+  - show_compare_at_price: {Boolean} Renders the compare at price if the product matches the condition (optional)
+
+  Usage:
+  {% render 'price', product: product %}
+{% endcomment %}
+```
+
+---
+
+</SwmSnippet>
 
 <SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBZGF3bi1mb3JrJTNBJTNBbXJpZXNjaA==" repo-name="dawn-fork"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>
