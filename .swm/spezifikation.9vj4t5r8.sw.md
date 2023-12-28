@@ -18,14 +18,13 @@ Die Schlüsselwörter „MUSS“, „DARF NICHT“, „ERFORDERLICH“, „SOLL�
 Im Kontext der DDS-Classic gibt es genau zwei Build Typen.
 
 | Vollständige Liste aller gültigen Werte | Verwendung                                                                 |
-|:----------------------------------------|:---------------------------------------------------------------------------|
+| :-------------------------------------- | :------------------------------------------------------------------------- |
 | RELEASE                                 | Wird an den Test weitergeben. KANN auch in Produktions installiert werden. |
 | SNAPSHOT                                | Wird NICHT an den Test weitergegeben werden                                |
 
 Regeln:
 
 - neu
-
 
 - Wenn in Git Branch develop/ oder release/ gebaut ist der Build Typ ein RELEASE.
 
@@ -40,7 +39,7 @@ Im DDS-Classic Kontext MUSS eine Zeichenkette, die einen RPM-Name beschreibt, fo
 ### Für Builds in Git Branch develop/ und release/
 
 | Vollständige Liste aller gültigen Werte |
-|-----------------------------------------|
+| --------------------------------------- |
 | c0hv_dds-application                    |
 | c0hv_dds-domain                         |
 | c0hv_dds-weblogic                       |
@@ -187,7 +186,7 @@ echo "${0} 'build_type'    -> Ausgabe >${build_type}<" echo "${0} 'branch_name' 
 
 /var/apps/weblogic/local/classic-21.00.00-build10
 
-<SwmSnippet path="/snippets/price.liquid" line="1">
+<SwmSnippet path="/snippets/price.liquid" line="1" collapsed>
 
 ---
 
@@ -212,5 +211,25 @@ This code snippet is a Liquid template that renders the price of a product. It h
 ---
 
 </SwmSnippet>
+
+```mermaid
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
+
+<SwmLink doc-title="Unklare Bedienung">[Unklare Bedienung](/.swm/unklare-bedienung.ki6txwn8.sw.md)</SwmLink>
+
+&nbsp;
+
+<SwmMention uid="Z1jk5xq">[Matthias Riesch](mailto:mriesch@gmail.com)</SwmMention>
+
+&nbsp;
+
+\`
 
 <SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBZGF3bi1mb3JrJTNBJTNBbXJpZXNjaA==" repo-name="dawn-fork"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>
