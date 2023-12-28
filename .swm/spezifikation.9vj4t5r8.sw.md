@@ -18,11 +18,14 @@ Die Schlüsselwörter „MUSS“, „DARF NICHT“, „ERFORDERLICH“, „SOLL�
 Im Kontext der DDS-Classic gibt es genau zwei Build Typen.
 
 | Vollständige Liste aller gültigen Werte | Verwendung                                                                 |
-| :-------------------------------------- | :------------------------------------------------------------------------- |
+|:----------------------------------------|:---------------------------------------------------------------------------|
 | RELEASE                                 | Wird an den Test weitergeben. KANN auch in Produktions installiert werden. |
 | SNAPSHOT                                | Wird NICHT an den Test weitergegeben werden                                |
 
 Regeln:
+
+- neu
+
 
 - Wenn in Git Branch develop/ oder release/ gebaut ist der Build Typ ein RELEASE.
 
@@ -37,7 +40,7 @@ Im DDS-Classic Kontext MUSS eine Zeichenkette, die einen RPM-Name beschreibt, fo
 ### Für Builds in Git Branch develop/ und release/
 
 | Vollständige Liste aller gültigen Werte |
-| --------------------------------------- |
+|-----------------------------------------|
 | c0hv_dds-application                    |
 | c0hv_dds-domain                         |
 | c0hv_dds-weblogic                       |
