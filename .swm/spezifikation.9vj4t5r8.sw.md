@@ -1,11 +1,11 @@
 ---
-title: Spec
+title: Spezifikation
 ---
 # Entwickler-Dokumentation RPM Nomenklatur
 
 Ein RPM besteht aus einer einzigen Datei. Normalerweise hat der Dateinamen folgendes Format:
 
-```
+```bash
  <name>-<version>-<release>
 ```
 
@@ -17,10 +17,10 @@ Die Schlüsselwörter „MUSS“, „DARF NICHT“, „ERFORDERLICH“, „SOLL�
 
 Im Kontext der DDS-Classic gibt es genau zwei Build Typen.
 
-| Vollständige Liste aller gültigen Werte | Verwendung                                                          |
-| --------------------------------------- | ------------------------------------------------------------------- |
-| RELEASE                                 | Wird an den Test weitergegen. KANN auch in Prod installiert werden. |
-| SNAPSHOT                                | Wird NICHT an den Test weitergegeben werden                         |
+| Vollständige Liste aller gültigen Werte | Verwendung                                                                 |
+| --------------------------------------- | -------------------------------------------------------------------------- |
+| RELEASE                                 | Wird an den Test weitergeben. KANN auch in Produktions installiert werden. |
+| SNAPSHOT                                | Wird NICHT an den Test weitergegeben werden                                |
 
 Regeln:
 
@@ -28,11 +28,11 @@ Regeln:
 
 - Wenn in einem anderen Git Branch gebaut wird ist Build Typ ein SNAPSHOT.
 
-- Wenn der Git Branch nicht ermittelt werden kann (z.B. HEAD detached at <Commit-ID>  als Grund), wird auf die Jenkins Enviroment Variable ausgewerten.
+- Wenn der Git Branch nicht ermittelt werden kann (z.B. HEAD detached at <Commit-ID>  als Grund), wird auf die Jenkins Environment Variable ausgewertet.
 
 ## Spezifikation Zeichenkette RPM-Name
 
-Im DDS-Classic Kontext MUSS eine Zeichenkette die einen RPM-Name beschreibt folgenden Werte haben:
+Im DDS-Classic Kontext MUSS eine Zeichenkette, die einen RPM-Name beschreibt, folgenden Werte haben:
 
 ### Für Builds in Git Branch develop/ und release/
 
@@ -74,13 +74,13 @@ Im DDS-Classic Kontext sind für RPM-Version folgende Werte gültig:
 | 21.00.00.02               |
 | Sonstige Anforderungen:   |
 
-- Diese Nomenklatur MUSS verwendet werden wenn aus dem Git Branch /develop oder /relase gebaut wird.
+- Diese Nomenklatur MUSS verwendet werden, wenn aus dem Git Branch /develop oder /relase gebaut wird.
 - Es ist immer ein Tupel der Länge 4
-- Die Zahlen MÜSSEN mindesten 2 stellig sein.
+- Die Zahlen MÜSSEN mindestens 2-stellig sein.
 - Wenn die Zahlen einstellig sind MÜSSEN sie mit einer führenden Null versehen werden.
 - Die Zahlen KÖNNEN eine führende Null haben
 - Die Zahlen KÖNNEN auch dreistellig werden.
-- Die Letzte Zahl ist die Jenkins Buildnummer.
+- Die letzte Zahl ist die Jenkins Buildnummer.
 - Der Implentierungsname ist release
 
 ### Für Build aus allen anderen Git Zweigen
@@ -91,6 +91,8 @@ Im DDS-Classic Kontext sind für RPM-Version folgende Werte gültig:
 | 19.1.0                    |
 | 21.0.0                    |
 | Sonstige Anforderungen:   |
+
+Sonstige Anforderungen:
 
 - Diese Nomenklatur MUSS verwendet werden wenn NICHT aus dem Git Branch /develop oder /relase gebaut wird.
 - Die Zahlen SOLLEN haben keine führende Null haben.
@@ -112,7 +114,7 @@ Im DDS-Classic Kontext sind für RPM-Release sind folgende Werte gültig:
 - Die Zahl MUSS immer Null sein.
 - Die Zahl MUSS immer zweistellig sein.
 - Es ist immer ein Tupel der Länge 1
-- Der Implentierungsname ist release
+- Der Implentierung name ist release
 
 ### Für Build aus allen anderen Git Zweigen
 
